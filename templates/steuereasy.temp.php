@@ -1,0 +1,247 @@
+<?php
+
+/**
+ * Template Details
+ * 
+ * Name: steuerEASY
+ * 
+ * Parameters (Variables):
+ * - salutation
+ * - last_name
+ */
+
+ 
+$sm_mail_content = '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]-->
+	<!--[if !mso]><!-->
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<!--<![endif]-->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: inherit !important;
+		}
+
+		#MessageViewBody a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		p {
+			line-height: inherit
+		}
+
+		@media (max-width:920px) {
+			.row-content {
+				width: 100% !important;
+			}
+
+			.stack .column {
+				width: 100%;
+				display: block;
+			}
+		}
+	</style>
+</head>
+
+<body style="background-color: #FFFFFF; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
+	<table class="nl-container" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF;">
+		<tbody>
+			<tr>
+				<td>
+					<table class="row row-1" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 900px;" width="900">
+										<tbody>
+											<tr>
+												<td class="column" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
+													<table class="image_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td style="width:100%;padding-right:0px;padding-left:0px;">
+																<div align="center" style="line-height:10px"><img src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/629225_611187/image%20%2816%29_1.png" style="display: block; height: auto; border: 0; width: 450px; max-width: 100%;" width="450"></div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 900px;" width="900">
+										<tbody>
+											<tr>
+												<td class="column" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
+													<table class="text_block" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+														<tr>
+															<td>
+																<div style="font-family: Arial, sans-serif">
+																	<div style="font-size: 14px; font-family: Arial, \'Helvetica Neue\', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #393d47; line-height: 1.2;">
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;"><span style="color:#000000;"><strong><span style="font-size:22px;">Vielen Dank für Ihren Auftrag. </span></strong></span></p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;">' . salutation( $sm_salutation, $sm_last_name ) . '</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;">Ihre Beauftragung ist bei uns eingegangen.</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;">Vielen Dank für Ihr Vertrauen! Ihre Beauftragung ist bei uns eingegangen und wird nun schnellstmöglich bearbeitet.&nbsp;</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;">Um Sie umfänglich beraten zu können, bitten wir Sie, falls noch nicht geschehen, Ihre Frage zu formulieren.</p>
+																		<p style="margin: 0;">Sie können hierzu gerne auf diese E-Mail antworten. Wir melden uns bei Ihnen!</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;">Damit es noch schneller geht, können Sie gleich im Chat Ihrer steuermachen-App Ihre Frage stellen.</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;">Ihre Rechnung zu Ihrem Auftrag senden wir Ihnen in Kürze in einer separaten E-Mail zu. Sie können diese auch jederzeit auf Ihrem Profil in der steuermachen-App aufrufen.&nbsp;</p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-3" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 900px;" width="900">
+										<tbody>
+											<tr>
+												<td class="column" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
+													<table class="text_block" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+														<tr>
+															<td>
+																<div style="font-family: Arial, sans-serif">
+																	<div style="font-size: 14px; font-family: Arial, \'Helvetica Neue\', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #393d47; line-height: 1.2;">
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;">Mit freundlichen Grüßen</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;">Ihr Team von steuermachen</p>
+																		<p style="margin: 0;"><a href="https://steuermachen.de" target="_blank" style="text-decoration: underline; color: #ff6138;" rel="noopener">www.steuermachen.de</a></p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;">GDF GmbH<br>Kaiserstraße 23<br>90403 Nürnberg<br>Fon: 0911-80190910</p>
+																		<p style="margin: 0;">E-Mail: <a href="mailto:dialog@steuermachen.de" target="_self" title="dialog@steuermachen.de" style="text-decoration: underline; color: #ff6138;">dialog@steuermachen.de</a></p>
+																		<p style="margin: 0;">Die GDF GmbH ist eingetragen im Handelsregister: AG Nürnberg - HRA 33156,</p>
+																		<p style="margin: 0;">Geschäftsführer: Tobias Gussmann</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-4" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #71d64a;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; background-color: #71d64a; width: 900px;" width="900">
+										<tbody>
+											<tr>
+												<td class="column" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
+													<table class="text_block" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+														<tr>
+															<td>
+																<div style="font-family: sans-serif">
+																	<div style="font-size: 12px; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;">
+																		<p style="margin: 0; text-align: center;"><a href="https://steuermachen.de/" target="_blank" rel="noopener" style>www.steuermachen.de</a></p>
+																		<p style="margin: 0; text-align: center; mso-line-height-alt: 14.399999999999999px;">&nbsp;</p>
+																		<p style="margin: 0; text-align: center;">Ihre Steuererklärung in guten Händen</p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="social_block" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td>
+																<table class="social-table" width="108px" border="0" cellpadding="0" cellspacing="0" role="presentation" align="center" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																	<tr>
+																		<td style="padding:0 2px 0 2px;"><a href="https://www.facebook.com/steuermachen.de" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-color/facebook@2x.png" width="32" height="32" alt="Facebook" title="facebook" style="display: block; height: auto; border: 0;"></a></td>
+																		<td style="padding:0 2px 0 2px;"><a href="https://www.linkedin.com/" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-color/linkedin@2x.png" width="32" height="32" alt="Linkedin" title="linkedin" style="display: block; height: auto; border: 0;"></a></td>
+																		<td style="padding:0 2px 0 2px;"><a href="https://www.instagram.com/steuermachen.de/" target="_blank"><img src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circle-color/instagram@2x.png" width="32" height="32" alt="Instagram" title="instagram" style="display: block; height: auto; border: 0;"></a></td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-5" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 900px;" width="900">
+										<tbody>
+											<tr>
+												<td class="column" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
+													<table class="text_block" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+														<tr>
+															<td>
+																<div style="font-family: Arial, sans-serif">
+																	<div style="font-size: 14px; font-family: Arial, \'Helvetica Neue\', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #393d47; line-height: 1.2;">
+																		<p style="margin: 0;"><span style="font-size:10px;color:#727272;">Der Inhalt dieser E-Mail ist ausschließlich für den bezeichneten Adressaten oder dessen Vertreter bestimmt. Sofern diese E-Mail irrtümlich an einen falschen Empfänger versendet wurde, bitten wir diesen, sich mit dem Absender in Verbindung zu setzen und die E-Mail zu vernichten. Bitte beachten Sie, dass diese E-Mail vertraulich ist und gegebenenfalls rechtlich geschützte Information enthält, so dass jede Form der unerlaubten Kopie oder der unbefugten Weitergabe oder Veröffentlichung dieser E-Mail oder ihres Inhalts nicht gestattet ist.</span><br><span style="font-size:10px;color:#727272;">steuermachen ist ein Produkt der GDF GmbH. Die GDF GmbH ist eingetragen im Handelsregister: AG Nürnberg – HRB 33156, Geschäftsführer: Tobias Gußmann</span><br><br></p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		<p style="margin: 0;"><strong>Sie haben noch weitere Steuererklärungen welche wir für Sie machen dürfen? Dann verschenken Sie keine Zeit und Geld und beauftragen gleich die weiteren Jahre!</strong></p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table><!-- End -->
+</body>
+
+</html>';

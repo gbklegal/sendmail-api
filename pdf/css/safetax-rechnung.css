@@ -1,0 +1,26 @@
+img#logo {
+    width: 62mm;
+}
+
+table#table-header {
+    margin-bottom: 10mm;
+}
+
+table#table-header tr td.first {
+    width: 120mm;
+}
+
+table#table-price tr td.first {
+    width: 130mm;
+}
+
+table#table-price tr td.second {
+    text-align: right;
+    width: 30mm;
+}
+
+
+img#logo_footer {
+    margin-top: 1mm;
+    height: 5.7mm
+}

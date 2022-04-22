@@ -39,8 +39,10 @@ function get_authorization_header() {
 
 /**
  * get access token from header
+ * 
+ * @return string|null
  */
-function get_bearer_token() {
+function get_bearer_token():?string {
     $headers = get_authorization_header();
     // HEADER: Get the access token from the header
     if (!empty($headers)) {
@@ -60,29 +62,14 @@ function get_bearer_token() {
 
 
 /**
- * check if the current request is a POST request
+ * check if the current request is a GET request
  * 
  * @return bool
  */
-function is_post():bool {
+function is_get():bool {
     $request_method = $_SERVER['REQUEST_METHOD'];
 
-    if ($request_method === 'POST')
-        return true;
-
-    return false;
-}
-
-
-/**
- * check if the current request is over http
- * 
- * @return bool
- */
-function is_https():bool {
-    $request_scheme = $_SERVER['REQUEST_SCHEME'] ?? parse_url($_SERVER['SCRIPT_URI'])['scheme'];
-
-    if ($request_scheme === 'https')
+    if ($request_method === 'GET')
         return true;
 
     return false;
@@ -108,10 +95,10 @@ function json_response( array $response, int $response_code = 200 ):void {
 
 
 /**
- * check bearer token combines an if statement
+ * check bearer token combined with an if statement
  * with the get_bearer_token function
  * 
- * @param string|null $bearer_token_hash
+ * @param string|null $bearer_token_hash - optional
  * 
  * @return bool
  */
@@ -126,8 +113,206 @@ function check_bearer_token( ?string $bearer_token_hash = null ):bool {
 
 
 /**
+ * check if the api key matches
+ * 
+ * @param string|null $api_key - optional
+ * 
  * @return bool
  */
-function has_access():bool {
-    return check_bearer_token( SENDMAIL_API_BEARER_TOKEN_HASH );
+function check_api_key( ?string $api_key = null ):bool {
+    // if (SM_API_KEY === $api_key)
+    $hashed_api_key = hash('sha256', $api_key);
+
+    if ($hashed_api_key === SM_API_KEY_HASH)
+        return true;
+
+    return false;
+}
+
+
+/**
+ * @param float $price
+ * @param string $currency - optional
+ * 
+ * @return string
+ */
+function format_price( $price, string $currency = '' ):string {
+    if ( true === is_string( $price ) )
+        return '';
+
+    $currency = !empty( $currency ) ? ' ' . $currency : $currency;
+
+    return number_format( $price, 2, ',', '.' ) . $currency;
+}
+
+
+/**
+ * get preformatted current date
+ * 
+ * @param string $format - optional
+ * 
+ * @return string
+ */
+function get_current_date( string $format = 'd.m.Y' ):string {
+    return date( $format );
+}
+
+
+/**
+ * TODO: write a better description
+ * salutation addition function
+ * 
+ * @param string $salutation - optional
+ * 
+ * @return string
+ */
+function salutation_addition( string $salutation = '' ):string {
+    $salutation = strtolower( $salutation );
+
+    if ($salutation === 'frau')
+        return '';
+
+    if ($salutation === 'herr')
+        return 'r';
+
+    return '/r';
+}
+
+/**
+ * salutation function
+ * 
+ * @param string $salutation - optional
+ * @param string $last_name - optional
+ * 
+ * @return string
+ */
+function salutation( string $saluation = '', string $last_name = '' ):string {
+    return 'Sehr geehrte' . salutation_addition( $saluation ) . ' ' . adjust_salutation( $saluation, true ) . "{$last_name},";
+}
+
+/**
+ * This will prevent the salutation 'Sonstige',
+ * 'Divers' or 'Keine Angabe' to be shown.
+ * 
+ * @param string $salutation - optional
+ * @param bool $whitespace - optional
+ * 
+ * @return string
+ */
+function adjust_salutation( string $salutation = '', bool $whitespace = false ):string {
+    $salutation_lower = strtolower( $salutation );
+    $salutation = ucfirst( $salutation );
+
+    if ( true === $whitespace )
+        $salutation .= ' ';
+
+    if ( $salutation_lower === 'herr' || $salutation_lower === 'frau' )
+        return $salutation;
+
+    return '';
+}
+
+
+/**
+ * check if the email template is in the email templates list
+ * 
+ * @param string $email_template
+ * 
+ * @return bool
+ */
+function email_template_exists( string $email_template = '' ):bool {
+    global $sm_email_templates;
+
+    return in_array( $email_template, $sm_email_templates );
+}
+
+
+/**
+ * ! ONLY USE IN DEV ENV.
+ * 
+ * @param array $items
+ * 
+ * @return void
+ */
+function demo_page( $items ):void {
+    $items = (array) $items;
+
+    echo '<pre>';
+    foreach ($items as $key => $item) {
+        echo "<code>{$key}:</code>" . PHP_EOL;
+        if (is_array($item))
+            echo print_r($item, true);
+        else
+            echo $item;
+
+        echo PHP_EOL . PHP_EOL;
+    }
+    echo '</pre>';
+}
+
+
+/**
+ * utility function to not have to use the global keyword every time
+ * 
+ * @return array
+ */
+function get_mail_related_parameters():array {
+    global $sm_mail_related_parameters;
+    return $sm_mail_related_parameters;
+}
+
+
+/**
+ * removes all mail related parameter from query string
+ * 
+ * @param string $query_string
+ * @param bool $http_query_build - optional
+ * 
+ * @return array|string
+ */
+function remove_mail_related_parameters( string $query_string, bool $http_query_build = false ) {
+    parse_str( $query_string, $query_string_array );
+
+    foreach( get_mail_related_parameters() as $parameter ) {
+        unset( $query_string_array[$parameter] );
+    }
+
+    if ( true === $http_query_build )
+        return http_build_query( $query_string_array );
+
+    return $query_string_array;
+}
+
+
+/**
+ * checks if the array contains a mail related parameter
+ * 
+ * @param array $array
+ * 
+ * @return bool
+ */
+function contains_mail_related_parameters( array $array ):bool {
+    foreach( get_mail_related_parameters() as $key )
+        if ( true === array_key_exists( $key, $array ) )
+            return true;
+
+    return false;
+}
+
+
+/**
+ * adds an suffix only when the suffix not already exists
+ * 
+ * @param string $file_name
+ * @param string $suffix
+ * 
+ * @return string
+ */
+function add_suffix( string $file_name, string $suffix ):string {
+    $extension = pathinfo( $file_name )['extension'] ?? null;
+
+    if ( true === is_null( $extension ) || $extension !== $suffix )
+        return $file_name .= '.' . $suffix;
+
+    return $file_name;
 }

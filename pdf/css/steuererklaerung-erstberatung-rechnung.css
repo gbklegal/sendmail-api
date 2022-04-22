@@ -1,0 +1,36 @@
+img#logo {
+    width: 70mm;
+}
+
+
+table#table-header tr td.first {
+    width: 85mm;
+}
+
+
+table#table-price tr td.first {
+    width: 134mm;
+}
+
+table#table-price tr td.second {
+    width: 10mm;
+}
+
+table#table-price tr td.third {
+    text-align: right;
+    width: 20mm;
+}
+
+
+#signature {
+    /* width: 60mm;
+    margin-top: -6mm;
+    margin-bottom: -12mm; */
+    width: 60mm;
+    margin-top: -35mm;
+}
+
+
+table#footer-table .first {
+    width: 70mm;
+}
