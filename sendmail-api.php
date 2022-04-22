@@ -7,10 +7,7 @@
 // abort direct access
 defined('ABSPATH') or exit;
 
-header('Access-Control-Allow-Headers: *');
-header('Access-Control-Allow-Origin: *');
-
-define('SM_VERSION', '0.2.0');
+define('SM_VERSION', '0.3.0');
 
 require __DIR__ . '/config.php';
 require __DIR__ . '/functions.php';
@@ -49,6 +46,8 @@ $sm_tax_year = esc_attr( $_GET['tax_year'] );
 $sm_performance_period = esc_attr( $_GET['performance_period'] );
 $sm_price_total = (int) esc_attr( $_GET['price_total'] );
 $sm_price = (float) esc_attr( $_GET['price'] );
+
+$sm_verification_link = esc_attr( $_GET['verification_link'] );
 
 $sm_pdf = esc_attr( $_GET['pdf'] );
 $sm_template_pdf = esc_attr( $_GET['template_pdf'] );
@@ -103,6 +102,8 @@ if (true === isset($_GET['version'])) {
     json_response(['version' => SM_VERSION]);
     exit;
 }
+
+
 
 // == PDF START ==
 if ( isset( $_GET['pdf'] ) ) {
@@ -194,7 +195,6 @@ function sm_phpmailer_init( $phpmailer ) {
  * always enable html in message suppport
  */
 $sm_mail_headers[] = 'Content-Type: text/html; charset=UTF-8';
-
 
 /**
  * the mail template adds the message for the mail function
