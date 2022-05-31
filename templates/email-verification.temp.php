@@ -116,10 +116,10 @@ $sm_mail_content = '<!DOCTYPE html>
 																	<div class="txtTinyMce-wrapper" style="font-size: 14px; font-family: Arial, \'Helvetica Neue\', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #393d47; line-height: 1.2;">
 																		<p style="margin: 0;"><span style="color:#000000;"><strong><span style="font-size:22px;">Willkommen bei steuermachen!</span></strong></span><span style="color:#000000;"></span></p>
 																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0;">' . salutation( $sm_salutation, $sm_last_name ) . '</p>
-																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0;">Sie haben sich bei steuermachen registriert.</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>';
+																		// <p style="margin: 0;">' . salutation( $sm_salutation, $sm_last_name ) . '</p>
+																		// <p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+																		$sm_mail_content .= '<p style="margin: 0;">Sie haben sich bei steuermachen registriert.</p>
 																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
 																		<p style="margin: 0;">Bitte verifizieren Sie Ihre E-Mail-Adresse, um zu bestätigen, dass dieses Konto Ihnen gehört und so zusätzliche Sicherheit zu gewährleisten.</p>
 																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>

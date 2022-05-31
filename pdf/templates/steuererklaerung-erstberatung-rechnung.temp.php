@@ -102,7 +102,7 @@ list($sm_fee, $sm_vat, $sm_price_total) = calc_fee_vat( $sm_price_total, true );
         <br><br><br><br>
         <div>
             Tobias Gussmann<br>
-            Rechstanwalt<br>
+            Rechtsanwalt<br>
             Fachanwalt für Steuerrecht
         </div>
         <div class="test-bg">
