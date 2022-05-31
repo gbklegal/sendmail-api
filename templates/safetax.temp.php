@@ -130,7 +130,7 @@ $sm_mail_content = '<!DOCTYPE html>
 																		<br>
 																		<p style="margin: 0;">Im Anhang dieser E-Mail erhalten Sie:</p>
 																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0; margin-left: 40px;"><strong>&nbsp;&gt; Ihre Steuercheckliste und die Vollmacht für Ihre Steuerkanzlei.</strong></p>
+																		<p style="margin: 0; margin-left: 40px;"><strong>&nbsp;&gt; Ihre Steuercheckliste</strong></p>
 																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
 																		<p style="margin: 0;">Bitte senden Sie Ihre relevanten Steuerunterlagen und die von Ihnen unterzeichnete Vollmacht umgehend per <a href="mailto:dialog@steuermachen.de" target="_blank" title="dialog@steuermachen.de" rel="noopener" style="color: #ff6138;">E-Mail</a>, Fax oder per Post an unsere nachfolgende Postanschrift:</p>
 																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>

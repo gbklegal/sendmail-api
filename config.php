@@ -72,6 +72,7 @@ $sm_pdf_templates = [
  */
 $sm_email_templates = [
     'beratung-flat',
+    'email-verification',
     'safetax',
     'steuereasy',
     'steuererklaerung-anfechtung-rechnung',
