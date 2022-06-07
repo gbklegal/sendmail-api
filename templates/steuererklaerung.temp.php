@@ -5,6 +5,10 @@
  * 
  * Name: Steuererklärung
  * 
+ * Attachments:
+ * - Checkliste
+ * - AGB
+ * 
  * Parameters (Variables):
  * - salutation
  * - last_name
@@ -21,6 +25,9 @@
  * ! - marital_status
  * ! - tax_year
  */
+
+$sm_mail_attachments[] = $sm_attachment_checklist;
+$sm_mail_attachments[] = $sm_attachment_agb;
 
 
 $sm_mail_content = '<!DOCTYPE html>

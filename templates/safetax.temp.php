@@ -12,18 +12,18 @@
  * Parameters (Variables):
  * - salutation
  * - last_name
- * - order_number
- * - order_date
- * - order_from
- * - first_name
- * - street
- * - house_number
- * - postcode
- * - city
- * - email
- * - phone
- * - marital_status
- * - tax_year
+ * ! - order_number
+ * ! - order_date
+ * ! - order_from
+ * ! - first_name
+ * ! - street
+ * ! - house_number
+ * ! - postcode
+ * ! - city
+ * ! - email
+ * ! - phone
+ * ! - marital_status
+ * ! - tax_year
  */
 
 $sm_mail_attachments[] = $sm_attachment_checklist_safetax;
@@ -197,41 +197,41 @@ $sm_mail_content = '<!DOCTYPE html>
 																</div>
 															</td>
 														</tr>
-													</table>
-													<table class="text_block" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
-														<tr>
-															<td>
-																<div style="font-family: sans-serif">
-																	<div style="font-size: 14px; mso-line-height-alt: 16.8px; color: #393d47; line-height: 1.2; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;">
-																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0;"><strong>Sie haben bei der Beauftragung folgende Angaben gemacht:</strong></p>
-																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0;">Bestellung bei steuermachen.de Auftrags-Nr: ' . $sm_order_number . '</p>
-																		<p style="margin: 0;">Bestelldatum: ' . $sm_order_date . '</p>
-																		<p style="margin: 0;">Bestellung von: ' . $sm_order_from . '</p>
-																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0;">Daten zur Beauftragung:</p>
-																		<p style="margin: 0;">' . adjust_salutation( $sm_salutation, true ) . $sm_first_name . ' ' . $sm_last_name . '</p>
-																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0;">Adresse:</p>
-																		<p style="margin: 0;">' . $sm_street . ' ' . $sm_house_number . '</p>
-																		<p style="margin: 0;">' . $sm_postcode . ' ' . $sm_city . '</p>
-                                                                        <p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0;">Kontaktdaten:</p>
-																		<p style="margin: 0;">' . $sm_email . '</p>
-																		<p style="margin: 0;">' . $sm_phone . '</p>
-                                                                        <p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0;">Familienstand: ' . $sm_marital_status . '</p>
-                                                                        <p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0;">Steuerjahr: ' . $sm_tax_year . '</p>
-																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																		<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
-																	</div>
-																</div>
-															</td>
-														</tr>
-													</table>
-												</td>
+													</table>';
+													// <table class="text_block" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+													// 	<tr>
+													// 		<td>
+													// 			<div style="font-family: sans-serif">
+													// 				<div style="font-size: 14px; mso-line-height-alt: 16.8px; color: #393d47; line-height: 1.2; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;">
+													// 					<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+													// 					<p style="margin: 0;"><strong>Sie haben bei der Beauftragung folgende Angaben gemacht:</strong></p>
+													// 					<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+													// 					<p style="margin: 0;">Bestellung bei steuermachen.de Auftrags-Nr: ' . $sm_order_number . '</p>
+													// 					<p style="margin: 0;">Bestelldatum: ' . $sm_order_date . '</p>
+													// 					<p style="margin: 0;">Bestellung von: ' . $sm_order_from . '</p>
+													// 					<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+													// 					<p style="margin: 0;">Daten zur Beauftragung:</p>
+													// 					<p style="margin: 0;">' . adjust_salutation( $sm_salutation, true ) . $sm_first_name . ' ' . $sm_last_name . '</p>
+													// 					<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+													// 					<p style="margin: 0;">Adresse:</p>
+													// 					<p style="margin: 0;">' . $sm_street . ' ' . $sm_house_number . '</p>
+													// 					<p style="margin: 0;">' . $sm_postcode . ' ' . $sm_city . '</p>
+                                                    //                     <p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+													// 					<p style="margin: 0;">Kontaktdaten:</p>
+													// 					<p style="margin: 0;">' . $sm_email . '</p>
+													// 					<p style="margin: 0;">' . $sm_phone . '</p>
+                                                    //                     <p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+													// 					<p style="margin: 0;">Familienstand: ' . $sm_marital_status . '</p>
+                                                    //                     <p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+													// 					<p style="margin: 0;">Steuerjahr: ' . $sm_tax_year . '</p>
+													// 					<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+													// 					<p style="margin: 0; mso-line-height-alt: 16.8px;">&nbsp;</p>
+													// 				</div>
+													// 			</div>
+													// 		</td>
+													// 	</tr>
+													// </table>
+												$sm_mail_content .= '</td>
 											</tr>
 										</tbody>
 									</table>
