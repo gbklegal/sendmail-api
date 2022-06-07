@@ -5,6 +5,10 @@
  * 
  * Name: Steuererklärung
  * 
+ * Attachments:
+ * - Checkliste
+ * - AGB
+ * 
  * Parameters (Variables):
  * - salutation
  * - last_name
