@@ -7,7 +7,7 @@
 // abort direct access
 defined('ABSPATH') or exit;
 
-define('SM_VERSION', '0.3.0');
+define('SM_VERSION', '0.3.2');
 
 require __DIR__ . '/config.php';
 require __DIR__ . '/functions.php';

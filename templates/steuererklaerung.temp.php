@@ -22,6 +22,9 @@
  * ! - tax_year
  */
 
+$sm_mail_attachments[] = $sm_attachment_checklist;
+$sm_mail_attachments[] = $sm_attachment_agb;
+
 
 $sm_mail_content = '<!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
