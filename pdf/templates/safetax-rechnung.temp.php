@@ -1,7 +1,5 @@
 <?php
 
-$sm_performance_period = 'Beauftragung bis Status Steuererstattung';
-
 list( $sm_price, $sm_fee, $sm_vat, $sm_total ) = calc_safetax_price( $sm_price, true );
 
 ?>
