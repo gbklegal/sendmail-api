@@ -1,5 +1,9 @@
 <?php
 
+if (true === empty( $sm_performance_period ) )
+    $sm_performance_period = 'Monat und Jahr';
+
+
 if ( true === str_starts_with( $sm_template_pdf, 'erstberatung' ) )
     $sm_fee_description = ', Gebühr gemäß Preisliste, § 612 II BGB';
 
@@ -11,6 +15,7 @@ if ( $sm_template_pdf === 'erstberatung' ) {
 else if ( $sm_template_pdf === 'erstberatung-flat' ) {
     $sm_fee_description_pre = 'Erstberatung-Flat; digitale Belegsammlung';
     $sm_price_total = 39;
+    $sm_performance_period = 'Jahr';
 }
 else if ( $sm_template_pdf === 'steuererklaerung' ) {
     $sm_fee_description = 'Einkommensteuererkl. VZ 20 ohne Einkunftserm., gem. Preisliste wie vereinbart, Grundlage: bis ' . format_price( $sm_total_prices_basis[$sm_price_total], '&euro;' );
