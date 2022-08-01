@@ -99,7 +99,7 @@ $sm_mail_related_parameters = [
 /**
  * mail attachment variables
  */
-$sm_attachment_checklist = WP_CONTENT_DIR . '/uploads/2022/04/steuermachenCheckliste.pdf';
-$sm_attachment_checklist_safetax = WP_CONTENT_DIR . '/uploads/2022/04/safeTaxCheckliste.pdf';
+$sm_attachment_checklist = WP_CONTENT_DIR . '/uploads/2022/02/steuermachenCheckliste.pdf';
+$sm_attachment_checklist_safetax = WP_CONTENT_DIR . '/uploads/2022/02/safeTaxCheckliste.pdf';
 $sm_attachment_agb = WP_CONTENT_DIR . '/uploads/2021/01/AGBSteuerkanzleiGussmann012021.pdf';
-$sm_attachment_agb_gdf = WP_CONTENT_DIR . '/uploads/2022/04/AGB-steuermachen-GDF-022022.pdf';
+$sm_attachment_agb_gdf = WP_CONTENT_DIR . '/uploads/2022/02/AGB-steuermachen-GDF-022022.pdf';
