@@ -7,10 +7,12 @@ if ( true === str_starts_with( $sm_template_pdf, 'erstberatung' ) )
 if ( $sm_template_pdf === 'erstberatung' ) {
     $sm_fee_description_pre = 'Erstberatung';
     $sm_price_total = 25;
+    $sm_performance_period = "$sm_current_month und $sm_next_month $sm_current_year";
 }
 else if ( $sm_template_pdf === 'beratung-flat' ) {
     $sm_fee_description_pre = 'Beratung-Flat; digitale Belegsammlung';
     $sm_price_total = 39;
+    $sm_performance_period = $sm_current_year;
 }
 else if ( $sm_template_pdf === 'steuererklaerung' ) {
     $sm_fee_description = 'Einkommensteuererkl. VZ 20 ohne Einkunftserm., gem. Preisliste wie vereinbart, Grundlage: bis ' . format_price( $sm_total_prices_basis[$sm_price_total], '&euro;' );
