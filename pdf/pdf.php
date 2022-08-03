@@ -8,6 +8,10 @@ require __DIR__ . '/vendor/autoload.php';
 
 require __DIR__ . '/functions.php';
 
+$sm_current_month = format_month_german('this month');
+$sm_next_month = format_month_german('next month');
+$sm_current_year = date('Y');
+
 use Spipu\Html2Pdf\Html2Pdf;
 
 /**
