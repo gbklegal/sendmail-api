@@ -64,7 +64,7 @@ $sm_pdf_templates = [
     'safetax',
     'steuererklaerung',
     'erstberatung',
-    'erstberatung-flat'
+    'beratung-flat'
 ];
 
 /**

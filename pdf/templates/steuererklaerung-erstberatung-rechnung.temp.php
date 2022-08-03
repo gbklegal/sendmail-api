@@ -8,8 +8,8 @@ if ( $sm_template_pdf === 'erstberatung' ) {
     $sm_fee_description_pre = 'Erstberatung';
     $sm_price_total = 25;
 }
-else if ( $sm_template_pdf === 'erstberatung-flat' ) {
-    $sm_fee_description_pre = 'Erstberatung-Flat; digitale Belegsammlung';
+else if ( $sm_template_pdf === 'beratung-flat' ) {
+    $sm_fee_description_pre = 'Beratung-Flat; digitale Belegsammlung';
     $sm_price_total = 39;
 }
 else if ( $sm_template_pdf === 'steuererklaerung' ) {

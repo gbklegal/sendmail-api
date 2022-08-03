@@ -21,7 +21,7 @@ if ( pdf_template_exists( $sm_template_pdf ) ) {
     if (
         $sm_template_pdf === 'steuererklaerung' ||
         $sm_template_pdf === 'erstberatung' ||
-        $sm_template_pdf === 'erstberatung-flat'
+        $sm_template_pdf === 'beratung-flat'
     ) {
         $sm_template_pdf_name = 'steuererklaerung-erstberatung';
         $sm_pdf_margins = [25, 15, 25, 15];
