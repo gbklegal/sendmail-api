@@ -1,5 +1,9 @@
 # sendmail API
 
+## v0.3.4
+- [Changed] PDF template name from `erstberatung-flat` to `beratung-flat`
+- [Changed] `performance_period` parameter is optional again
+
 ## v0.3.3
 - [Changed] `performance_period` parameter is required now - and has no default value anymore
 
