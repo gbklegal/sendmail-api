@@ -8,6 +8,10 @@ require __DIR__ . '/vendor/autoload.php';
 
 require __DIR__ . '/functions.php';
 
+$sm_current_month = format_month_german('this month');
+$sm_next_month = format_month_german('next month');
+$sm_current_year = date('Y');
+
 use Spipu\Html2Pdf\Html2Pdf;
 
 /**
@@ -21,7 +25,7 @@ if ( pdf_template_exists( $sm_template_pdf ) ) {
     if (
         $sm_template_pdf === 'steuererklaerung' ||
         $sm_template_pdf === 'erstberatung' ||
-        $sm_template_pdf === 'erstberatung-flat'
+        $sm_template_pdf === 'beratung-flat'
     ) {
         $sm_template_pdf_name = 'steuererklaerung-erstberatung';
         $sm_pdf_margins = [25, 15, 25, 15];

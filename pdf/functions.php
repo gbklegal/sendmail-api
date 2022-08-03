@@ -133,3 +133,17 @@ function pdf_template_exists( string $pdf_template = '' ):bool {
 
     return in_array( $pdf_template, $sm_pdf_templates );
 }
+
+
+/**
+ * format time to full month in german language
+ * 
+ * @param string $time - optional
+ * 
+ * @return string
+ */
+function format_month_german( string $time = 'now' ):string {
+    $date_time_object = new DateTime($time, new DateTimeZone('Europe/Berlin'));
+
+    return IntlDateFormatter::formatObject($date_time_object, 'MMMM', 'de');
+}
