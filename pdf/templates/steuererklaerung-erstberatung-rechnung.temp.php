@@ -15,8 +15,10 @@ else if ( $sm_template_pdf === 'beratung-flat' ) {
     $sm_performance_period = $sm_current_year;
 }
 else if ( $sm_template_pdf === 'steuererklaerung' ) {
-    $sm_fee_description = 'Einkommensteuererkl. VZ 20 ohne Einkunftserm., gem. Preisliste wie vereinbart, Grundlage: bis ' . format_price( $sm_total_prices_basis[$sm_price_total], '&euro;' );
+    $sm_fee_description_adverb = (array_key_last($sm_total_prices_basis) === $sm_price_total ? 'über' : 'bis');
+    $sm_fee_description = "Einkommensteuererkl. VZ 20 ohne Einkunftserm., gem. Preisliste wie vereinbart, Grundlage: $sm_fee_description_adverb " . format_price( $sm_total_prices_basis[$sm_price_total], '&euro;' );
     $sm_price_total = $sm_price_total;
+    $sm_performance_period = "$sm_current_month und $sm_next_month $sm_current_year";
 }
 
 list($sm_fee, $sm_vat, $sm_price_total) = calc_fee_vat( $sm_price_total, true );
