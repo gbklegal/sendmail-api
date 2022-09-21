@@ -45,16 +45,12 @@ $sm_total_prices = [
  * list of total prices with there basis
  */
 $sm_total_prices_basis = [
-    89 => 8000,
     99 => 16000,
-    129 => 25000,
-    169 => 37000,
-    189 => 50000,
-    229 => 80000,
-    299 => 110000,
+    189 => 37000,
+    199 => 50000,
+    239 => 80000,
     319 => 150000,
-    369 => 200000,
-    429 => 250000
+    439 => 150000,
 ];
 
 /**
@@ -101,5 +97,5 @@ $sm_mail_related_parameters = [
  */
 $sm_attachment_checklist = WP_CONTENT_DIR . '/uploads/2022/02/steuermachenCheckliste.pdf';
 $sm_attachment_checklist_safetax = WP_CONTENT_DIR . '/uploads/2022/02/safeTaxCheckliste.pdf';
-$sm_attachment_agb = WP_CONTENT_DIR . '/uploads/2021/01/AGBSteuerkanzleiGussmann012021.pdf';
+$sm_attachment_agb = WP_CONTENT_DIR . '/uploads/2022/09/AGBSteuerkanzleiGussmann092022.pdf';
 $sm_attachment_agb_gdf = WP_CONTENT_DIR . '/uploads/2022/02/AGB-steuermachen-GDF-022022.pdf';

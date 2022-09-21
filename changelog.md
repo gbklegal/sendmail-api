@@ -1,5 +1,9 @@
 # sendmail API
 
+## v0.3.5
+- [Updated] the prices
+- [Updated] AGB URL
+
 ## v0.3.4
 - [Changed] PDF template name from `erstberatung-flat` to `beratung-flat`
 - [Changed] `performance_period` parameter is optional again
